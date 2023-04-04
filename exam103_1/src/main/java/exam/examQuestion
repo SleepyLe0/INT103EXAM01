@@ -1,0 +1,39 @@
+// Note: Problems are in "exam.xxx" packages.
+// Solutions are in "solution.xxx" packages.
+
+1. (20 points) Given the following two classes (School and Department) 
+in exam.unit package, refactor these two classes by creating a public abstract superclass 
+named OrgUnit in exam.base package and moving/adjusting common parts 
+(attributes, methods, and constructors) in School and Department to OrgUnit 
+as many as possible and changing access modifiers minimally if needed.
+
+2. (5 points) In exam.base package, create an interface named Loggable that 
+has two methods which are getLog() (returns String) and clearLog() (returns void).  
+Make the OrgUnit class implement Loggable interface so that the clearLog method 
+will reset the existing logging to an empty string.
+
+3. (10 points) Write a MainOrgTest class in exam.main package to test 
+School, Department, OrgUnit, and Loggable.  The MainOrgTest must 
+contain the following methods and work correctly.
+  3.1. testSchool() tests that School objects work correctly as School.
+  3.2. testDepartment() tests that Department objects work correctly as Department.
+  3.3. testSchoolAsOrgUnit() tests that School objects work correctly as OrgUnit.
+  3.4. testDepartmentAsLoggable() tests that Department objects work correctly as Loggable.
+  3.5. public static void main(String[] args) calls all of the above methods. 
+
+4. (5 points) Create a public class named Staff in exam.unit package and 
+the Staff class contains the following attributes: id (int), firstname (String), 
+lastname (String), and affiliation (OrgUnit) which are all private.
+  4.1. This class has a constructor that receives parameters to initialize all of its attributes. 
+         It contains all getters and setters.
+  4.2. Write a test method named testStaff() in the MainOrgTest to test that 
+         Staff objects work correctly on its constructor and both getter and setter 
+         for affiliation attribute.
+
+5. (10 points) Given the following Group class that works as a group of Objects. 
+Convert this code to use Generic; i.e., Group<T>. In case that the given code 
+works incorrectly, correct it as well.
+
+6. (10 points) Write a test method named testDepartmentGroup() in the MainOrgTest 
+to test that Group<Department> objects work correctly on append(), find(), remove(), 
+and get() and also use a for loop to access all Department objects in the group.
